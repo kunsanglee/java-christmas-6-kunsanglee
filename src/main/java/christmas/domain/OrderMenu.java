@@ -1,14 +1,12 @@
 package christmas.domain;
 
 
-import christmas.dto.OrderMenuDto;
 import java.util.Map;
 
 public class OrderMenu {
     private final OrderBook orderBook;
 
-    public OrderMenu(OrderMenuDto orderMenuDto) {
-        Map<String, Integer> orderBook = orderMenuDto.orderMenu();
+    public OrderMenu(Map<String, Integer> orderBook) {
         this.orderBook = new OrderBook(orderBook);
     }
 }
