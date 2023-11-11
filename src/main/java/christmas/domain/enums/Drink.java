@@ -1,5 +1,7 @@
 package christmas.domain.enums;
 
+import static christmas.exception.ExceptionMessage.INVALID_ORDER_MENU;
+
 public enum Drink implements MenuItem {
     ZERO_COKE("제로콜라", 3_000),
     RED_WINE("레드와인", 60_000),
@@ -22,5 +24,18 @@ public enum Drink implements MenuItem {
     @Override
     public int getPrice() {
         return this.price;
+    }
+
+    @Override
+    public boolean isSameName(String name) {
+        validate(name);
+        return this.name.equals(name);
+    }
+
+    @Override
+    public void validate(String name) {
+        if (name == null || name.isEmpty()) {
+            throw new IllegalArgumentException(INVALID_ORDER_MENU.getMessage());
+        }
     }
 }

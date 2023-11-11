@@ -29,7 +29,7 @@ public enum Menu {
     public static MenuItem findMenuItemByName(String name) {
         return Arrays.stream(Menu.values())
                 .flatMap(menu -> menu.getMenuItem().stream())
-                .filter(menuItem -> menuItem.getName().equals(name))
+                .filter(menuItem -> menuItem.isSameName(name))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException(INVALID_ORDER_MENU.getMessage()));
     }
