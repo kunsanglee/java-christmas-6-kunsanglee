@@ -5,6 +5,7 @@ import christmas.dto.OrderMenuDto;
 import christmas.dto.VisitDateDto;
 
 public class InputView {
+
     private final InputParser inputParser;
 
     public InputView(InputParser inputParser) {

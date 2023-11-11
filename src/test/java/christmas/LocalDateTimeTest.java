@@ -1,5 +1,8 @@
 package christmas;
 
+import static org.assertj.core.api.Assertions.assertThatCode;
+
+import java.time.DateTimeException;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
@@ -24,6 +27,8 @@ public class LocalDateTimeTest {
         System.out.println(DayOfWeek.of(5));
         System.out.println(DayOfWeek.of(6));
         System.out.println(DayOfWeek.of(7));
+        assertThatCode(() -> LocalDate.of(2023, 12, 50))
+                .isInstanceOf(DateTimeException.class);
         Arrays.stream(DayOfWeek.values())
                 .forEach(week -> {
                     if (week.equals(DayOfWeek.FRIDAY) || week.equals(DayOfWeek.SATURDAY)) {

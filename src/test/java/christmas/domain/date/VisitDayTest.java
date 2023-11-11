@@ -1,4 +1,4 @@
-package christmas.domain;
+package christmas.domain.date;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
@@ -47,5 +47,12 @@ public class VisitDayTest {
                 arguments(6, false),
                 arguments(7, false)
         );
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {1, 3, 7, 10, 25, 31})
+    void getDayOfMonthTest(int date) {
+        VisitDate visitDate = new VisitDate(date);
+        assertThat(visitDate.getDayOfMonth()).isEqualTo(date);
     }
 }

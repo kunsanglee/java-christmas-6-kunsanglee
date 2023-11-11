@@ -1,4 +1,4 @@
-package christmas.constant;
+package christmas.view;
 
 public enum MenuInput {
     COMMA(","),

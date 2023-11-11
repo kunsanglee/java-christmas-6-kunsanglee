@@ -1,7 +1,8 @@
-package christmas.domain.enums;
+package christmas.domain.menu;
 
 import static org.assertj.core.api.Assertions.assertThatCode;
 
+import christmas.domain.order.menu.Menu;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

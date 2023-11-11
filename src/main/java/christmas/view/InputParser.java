@@ -1,11 +1,11 @@
 package christmas.view;
 
 
-import static christmas.constant.MenuInput.COMMA;
-import static christmas.constant.MenuInput.DASH;
-import static christmas.constant.MenuInput.REGEX;
 import static christmas.exception.ExceptionMessage.INVALID_ORDER_MENU;
 import static christmas.exception.ExceptionMessage.INVALID_VISIT_DATE;
+import static christmas.view.MenuInput.COMMA;
+import static christmas.view.MenuInput.DASH;
+import static christmas.view.MenuInput.REGEX;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -16,8 +16,8 @@ import java.util.stream.Collectors;
 
 public class InputParser {
 
-    public static final int NAME = 0;
-    public static final int COUNT = 1;
+    private static final int NAME = 0;
+    private static final int COUNT = 1;
 
     public int parseVisitDay(String inputDay) {
         try {

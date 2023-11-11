@@ -1,4 +1,4 @@
-package christmas.domain.enums;
+package christmas.domain.order.menu;
 
 public interface MenuItem {
     String getName();

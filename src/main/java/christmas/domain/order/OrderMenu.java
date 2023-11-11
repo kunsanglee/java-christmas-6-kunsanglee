@@ -1,16 +1,19 @@
-package christmas.domain;
+package christmas.domain.order;
 
 
 import static christmas.exception.ExceptionMessage.INVALID_ORDER_MENU;
 
-import christmas.domain.enums.Menu;
-import christmas.domain.enums.MenuItem;
+import christmas.domain.order.menu.Dessert;
+import christmas.domain.order.menu.MainCourse;
+import christmas.domain.order.menu.Menu;
+import christmas.domain.order.menu.MenuItem;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class OrderMenu {
-    public static final int MIN_COUNT = 1;
-    public static final int MAX_COUNT = 20;
+
+    private static final int MIN_COUNT = 1;
+    private static final int MAX_COUNT = 20;
     private final Map<MenuItem, Integer> orderBook;
 
     public OrderMenu(Map<String, Integer> orderBook) {
@@ -54,5 +57,25 @@ public class OrderMenu {
             result.put(menu, entry.getValue());
         }
         return result;
+    }
+
+    public int getTotalPrice() {
+        return this.orderBook.entrySet().stream()
+                .mapToInt(menuItem -> menuItem.getKey().getPrice() * menuItem.getValue())
+                .sum();
+    }
+
+    public int getDessertCount() {
+        return this.orderBook.entrySet().stream()
+                .filter(entry -> entry.getKey() instanceof Dessert)
+                .mapToInt(Map.Entry::getValue)
+                .sum();
+    }
+
+    public int getMainCourseCount() {
+        return this.orderBook.entrySet().stream()
+                .filter(entry -> entry.getKey() instanceof MainCourse)
+                .mapToInt(Map.Entry::getValue)
+                .sum();
     }
 }

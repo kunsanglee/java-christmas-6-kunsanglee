@@ -1,4 +1,4 @@
-package christmas.domain;
+package christmas.domain.order;
 
 import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
