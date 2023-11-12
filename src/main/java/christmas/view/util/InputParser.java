@@ -1,11 +1,11 @@
-package christmas.view;
+package christmas.view.util;
 
 
 import static christmas.exception.ExceptionMessage.INVALID_ORDER_MENU;
 import static christmas.exception.ExceptionMessage.INVALID_VISIT_DATE;
-import static christmas.view.MenuInput.COMMA;
-import static christmas.view.MenuInput.DASH;
-import static christmas.view.MenuInput.REGEX;
+import static christmas.view.util.MenuInput.COMMA;
+import static christmas.view.util.MenuInput.DASH;
+import static christmas.view.util.MenuInput.REGEX;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;

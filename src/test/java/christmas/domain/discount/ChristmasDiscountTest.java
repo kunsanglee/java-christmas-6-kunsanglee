@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 import christmas.domain.date.VisitDate;
+import christmas.domain.discount.policy.ChristmasDiscount;
 import christmas.domain.order.Order;
 import christmas.domain.order.OrderMenu;
 import java.util.Map;
@@ -51,17 +52,13 @@ public class ChristmasDiscountTest {
 
     static Stream<Arguments> discountTestArguments() {
         return Stream.of(
-                arguments(new Order(new VisitDate(1), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), -1_000),
-                arguments(new Order(new VisitDate(5), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), -1_400),
-                arguments(new Order(new VisitDate(10), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), -1_900),
-                arguments(new Order(new VisitDate(15), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), -2_400),
-                arguments(new Order(new VisitDate(20), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), -2_900),
-                arguments(new Order(new VisitDate(25), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), -3_400),
-                arguments(new Order(new VisitDate(25), new OrderMenu(Map.of("양송이수프", 1, "제로콜라", 1))), 0),
-                arguments(new Order(new VisitDate(25), new OrderMenu(Map.of("타파스", 1, "제로콜라", 1))), 0),
-                arguments(new Order(new VisitDate(25), new OrderMenu(Map.of("시저샐러드", 1, "제로콜라", 1))), -3_400),
-                arguments(new Order(new VisitDate(26), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), 0),
-                arguments(new Order(new VisitDate(31), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), 0)
+                arguments(new Order(new VisitDate(1), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), 1_000),
+                arguments(new Order(new VisitDate(5), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), 1_400),
+                arguments(new Order(new VisitDate(10), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), 1_900),
+                arguments(new Order(new VisitDate(15), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), 2_400),
+                arguments(new Order(new VisitDate(20), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), 2_900),
+                arguments(new Order(new VisitDate(25), new OrderMenu(Map.of("티본스테이크", 1, "제로콜라", 1))), 3_400),
+                arguments(new Order(new VisitDate(25), new OrderMenu(Map.of("시저샐러드", 1, "제로콜라", 1))), 3_400)
         );
     }
 }

@@ -1,8 +1,8 @@
-package christmas.domain.discount;
+package christmas.domain.discount.policy;
 
-import static christmas.domain.discount.DiscountValue.NO_DISCOUNT;
 import static christmas.domain.discount.DiscountValue.WEEKEND_MAIN_COURSE_DISCOUNT;
 
+import christmas.domain.discount.event.EventDate;
 import christmas.domain.order.Order;
 
 public class WeekendDiscount implements Discount {
@@ -14,9 +14,11 @@ public class WeekendDiscount implements Discount {
 
     @Override
     public int discount(Order order) {
-        if (isSupport(order)) {
-            return -(order.getMainCourseCount() * WEEKEND_MAIN_COURSE_DISCOUNT.getValue());
-        }
-        return NO_DISCOUNT.getValue();
+        return order.getMainCourseCount() * WEEKEND_MAIN_COURSE_DISCOUNT.getValue();
+    }
+
+    @Override
+    public String getEventName() {
+        return EventDate.WEEKEND_EVENT.getName();
     }
 }

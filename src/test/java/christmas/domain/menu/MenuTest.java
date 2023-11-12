@@ -3,11 +3,13 @@ package christmas.domain.menu;
 import static org.assertj.core.api.Assertions.assertThatCode;
 
 import christmas.domain.order.menu.Menu;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class MenuTest {
 
+    @DisplayName("메뉴판에 있는 메뉴를 입력하면 에러가 발생하지 않는다.")
     @ParameterizedTest
     @ValueSource(strings = {"양송이수프", "타파스", "시저샐러드", "티본스테이크", "바비큐립", "해산물파스타", "크리스마스파스타", "초코케이크", "아이스크림", "제로콜라",
             "레드와인", "샴페인"})
@@ -16,6 +18,7 @@ public class MenuTest {
                 .doesNotThrowAnyException();
     }
 
+    @DisplayName("메뉴판에 없는 메뉴를 입력하면 에러가 발생한다.")
     @ParameterizedTest
     @ValueSource(strings = {"양송이soup", "tapas", "샐러드싫어", "스네이크", "aasd", " ", "", "cake", "아이스 크림", "제로 콜라",
             "12312321", "APPETIZER"})

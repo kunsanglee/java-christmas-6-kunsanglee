@@ -4,6 +4,7 @@ import static christmas.EventConfig.MONTH;
 import static christmas.EventConfig.YEAR;
 import static christmas.exception.ExceptionMessage.INVALID_VISIT_DATE;
 
+import christmas.domain.discount.event.EventDate;
 import java.time.DateTimeException;
 import java.time.DayOfWeek;
 import java.time.LocalDate;

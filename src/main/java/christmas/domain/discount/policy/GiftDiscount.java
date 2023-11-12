@@ -1,8 +1,8 @@
-package christmas.domain.discount;
+package christmas.domain.discount.policy;
 
 import static christmas.domain.discount.DiscountValue.GIFT_DISCOUNT;
-import static christmas.domain.discount.DiscountValue.NO_DISCOUNT;
 
+import christmas.domain.discount.event.EventDate;
 import christmas.domain.order.Order;
 
 public class GiftDiscount implements Discount {
@@ -14,9 +14,11 @@ public class GiftDiscount implements Discount {
 
     @Override
     public int discount(Order order) {
-        if (isSupport(order)) {
-            return -GIFT_DISCOUNT.getValue();
-        }
-        return NO_DISCOUNT.getValue();
+        return GIFT_DISCOUNT.getValue();
+    }
+
+    @Override
+    public String getEventName() {
+        return EventDate.GIFT_EVENT.getName();
     }
 }
