@@ -7,6 +7,7 @@ import christmas.view.util.InputParser;
 import java.util.Map;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -66,5 +67,14 @@ public class InputParserTest {
                 Arguments.of("해산물파스타-2,레드와인-1,초코케이크-1", Map.of("해산물파스타", 2, "레드와인", 1, "초코케이크", 1)),
                 Arguments.of("티본스테이크-1,바비큐립-1,초코케이크-2,제로콜라-1", Map.of("티본스테이크", 1, "바비큐립", 1, "초코케이크", 2, "제로콜라", 1))
         );
+    }
+
+    @DisplayName("주문 메뉴에 중복된 메뉴를 입력하면 에러가 발생한다.")
+    @Test
+    void parseOrderMenuDuplicateTest() {
+        InputParser inputParser = new InputParser();
+        assertThatCode(() -> inputParser.parseOrderMenu("양송이수프-1,제로콜라-2,양송이수프-2"))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
     }
 }
