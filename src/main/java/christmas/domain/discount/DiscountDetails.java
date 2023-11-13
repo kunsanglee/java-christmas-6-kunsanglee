@@ -2,6 +2,8 @@ package christmas.domain.discount;
 
 import christmas.domain.discount.event.EventDate;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 public class DiscountDetails {
 
@@ -12,7 +14,8 @@ public class DiscountDetails {
     }
 
     public Map<String, Integer> getDiscountDetails() {
-        return this.discountDetails;
+        return this.discountDetails.entrySet().stream()
+                .collect(Collectors.toUnmodifiableMap(Entry::getKey, Entry::getValue));
     }
 
     public int getTotalDiscountAmount() {
