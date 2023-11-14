@@ -1,19 +1,18 @@
 package christmas.domain.discount.enums;
 
 public enum EventBadge {
-    NONE("없음"),
-    STAR("별"),
-    TREE("트리"),
-    SANTA("산타"),
+    NONE("없음", 0),
+    STAR("별", 5_000),
+    TREE("트리", 10_000),
+    SANTA("산타", 20_000),
     ;
 
-    private static final int MIN_STAR_DISCOUNT_AMOUNT = 5000;
-    private static final int MIN_TREE_DISCOUNT_AMOUNT = 10000;
-    private static final int MIN_SANTA_DISCOUNT_AMOUNT = 20000;
     private final String badge;
+    private final int amount;
 
-    EventBadge(String badge) {
+    EventBadge(String badge, int amount) {
         this.badge = badge;
+        this.amount = amount;
     }
 
     public static String getBadge(int totalDiscountAmount) {
@@ -30,14 +29,14 @@ public enum EventBadge {
     }
 
     private static boolean isNoneBadge(int totalDiscountAmount) {
-        return totalDiscountAmount < MIN_STAR_DISCOUNT_AMOUNT;
+        return totalDiscountAmount < STAR.amount;
     }
 
     private static boolean isStarBadge(int totalDiscountAmount) {
-        return totalDiscountAmount < MIN_TREE_DISCOUNT_AMOUNT;
+        return totalDiscountAmount < TREE.amount;
     }
 
     private static boolean isTreeBadge(int totalDiscountAmount) {
-        return totalDiscountAmount < MIN_SANTA_DISCOUNT_AMOUNT;
+        return totalDiscountAmount < SANTA.amount;
     }
 }

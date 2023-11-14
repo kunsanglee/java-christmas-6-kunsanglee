@@ -1,13 +1,14 @@
 package christmas.domain.order.domain;
 
 
+import static christmas.domain.order.enums.OrderValue.MIN_ORDER_AMOUNT_FOR_DISCOUNT;
+import static christmas.domain.order.enums.OrderValue.MIN_ORDER_AMOUNT_FOR_GIFT_DISCOUNT;
+
 import christmas.domain.date.domain.VisitDate;
 import christmas.domain.discount.enums.EventDate;
 
 public class Order {
 
-    private static final int MIN_ORDER_AMOUNT_FOR_DISCOUNT = 10_000;
-    private static final int MIN_ORDER_AMOUNT_FOR_GIFT_DISCOUNT = 120_000;
     private final VisitDate visitDate;
     private final OrderMenu orderMenu;
 
@@ -33,11 +34,11 @@ public class Order {
     }
 
     public boolean isTotalPriceAcceptableDiscount() {
-        return MIN_ORDER_AMOUNT_FOR_DISCOUNT <= this.getTotalPrice();
+        return MIN_ORDER_AMOUNT_FOR_DISCOUNT.getValue() <= this.getTotalPrice();
     }
 
     public boolean isTotalPriceAcceptableGiftDiscount() {
-        return MIN_ORDER_AMOUNT_FOR_GIFT_DISCOUNT <= this.getTotalPrice();
+        return MIN_ORDER_AMOUNT_FOR_GIFT_DISCOUNT.getValue() <= this.getTotalPrice();
     }
 
     public int getDessertCount() {

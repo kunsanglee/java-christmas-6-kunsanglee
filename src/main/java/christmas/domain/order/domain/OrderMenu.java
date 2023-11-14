@@ -1,6 +1,8 @@
 package christmas.domain.order.domain;
 
 
+import static christmas.domain.order.enums.OrderMenuCount.MAX_ORDER_MENU_COUNT;
+import static christmas.domain.order.enums.OrderMenuCount.MIN_ORDER_MENU_COUNT;
 import static christmas.exception.ExceptionMessage.INVALID_ORDER_MENU;
 
 import christmas.domain.order.enums.Dessert;
@@ -12,8 +14,6 @@ import java.util.Map;
 
 public class OrderMenu {
 
-    private static final int MIN_COUNT = 1;
-    private static final int MAX_COUNT = 20;
     private final Map<MenuItem, Integer> orderBook;
 
     public OrderMenu(Map<String, Integer> orderBook) {
@@ -41,11 +41,11 @@ public class OrderMenu {
 
     private boolean isLessThanMinOrderCount(Map<String, Integer> orderBook) {
         return orderBook.values().stream()
-                .anyMatch(count -> count < MIN_COUNT);
+                .anyMatch(count -> count < MIN_ORDER_MENU_COUNT.getCount());
     }
 
     private boolean isMoreThanMaxWholeOrderCounts(Map<String, Integer> orderBook) {
-        return MAX_COUNT < orderBook.values().stream()
+        return MAX_ORDER_MENU_COUNT.getCount() < orderBook.values().stream()
                 .mapToInt(Integer::intValue)
                 .sum();
     }

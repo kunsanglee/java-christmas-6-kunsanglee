@@ -5,7 +5,7 @@ import static christmas.domain.discount.enums.DiscountValue.WEEKDAY_DESSERT_DISC
 import christmas.domain.discount.enums.EventDate;
 import christmas.domain.order.domain.Order;
 
-public class WeekDayDiscount implements Discount {
+public final class WeekDayDiscount implements Discount {
 
     @Override
     public boolean isSupport(Order order) {
