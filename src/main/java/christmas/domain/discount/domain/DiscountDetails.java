@@ -1,21 +1,21 @@
 package christmas.domain.discount.domain;
 
 import christmas.domain.discount.enums.EventDate;
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.stream.Collectors;
 
 public class DiscountDetails {
 
     private final Map<String, Integer> discountDetails;
 
     public DiscountDetails(Map<String, Integer> discountDetails) {
-        this.discountDetails = discountDetails;
+        this.discountDetails = new LinkedHashMap<>(discountDetails);
     }
 
     public Map<String, Integer> getDiscountDetails() {
-        return this.discountDetails.entrySet().stream()
-                .collect(Collectors.toUnmodifiableMap(Entry::getKey, Entry::getValue));
+        LinkedHashMap<String, Integer> copy = new LinkedHashMap<>(this.discountDetails);
+        return Collections.unmodifiableMap(copy);
     }
 
     public int getTotalDiscountAmount() {

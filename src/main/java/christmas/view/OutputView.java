@@ -21,10 +21,10 @@ import static christmas.view.message.OutputMessage.TOTAL_DISCOUNT_AMOUNT;
 import static christmas.view.message.OutputMessage.TOTAL_DISCOUNT_AMOUNT_TITLE;
 
 import christmas.EventConfig;
-import christmas.domain.discount.enums.EventBadge;
-import christmas.domain.discount.dto.DiscountDetailsDto;
-import christmas.domain.order.dto.OrderMenuDto;
 import christmas.domain.date.dto.VisitDateDto;
+import christmas.domain.discount.dto.DiscountDetailsDto;
+import christmas.domain.discount.enums.EventBadge;
+import christmas.domain.order.dto.OrderMenuDto;
 import java.util.Map;
 
 public class OutputView {
@@ -84,7 +84,7 @@ public class OutputView {
     private void printTotalDiscountAmount(DiscountDetailsDto discountDetailsDto) {
         printWithNewLine(TOTAL_DISCOUNT_AMOUNT_TITLE.getMessage());
         int totalDiscountAmount = discountDetailsDto.getTotalDiscountAmount();
-        if (totalDiscountAmount < NO_DISCOUNT_AMOUNT.getValue()) {
+        if (totalDiscountAmount > NO_DISCOUNT_AMOUNT.getValue()) {
             System.out.println(String.format(TOTAL_DISCOUNT_AMOUNT.getMessage(), totalDiscountAmount));
             return;
         }

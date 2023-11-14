@@ -12,7 +12,7 @@ public enum OutputMessage {
     DISCOUNT_DETAIL_TITLE("<혜택 내역>"),
     DISCOUNT_DETAIL("%s: -%,d원"),
     TOTAL_DISCOUNT_AMOUNT_TITLE("<총혜택 금액>"),
-    TOTAL_DISCOUNT_AMOUNT("%,d원"),
+    TOTAL_DISCOUNT_AMOUNT("-%,d원"),
     DISCOUNTED_TOTAL_AMOUNT_TITLE("<할인 후 예상 결제 금액>"),
     DISCOUNTED_TOTAL_AMOUNT("%,d원"),
     EVENT_BADGE_TITLE("<%d월 이벤트 배지>"),
