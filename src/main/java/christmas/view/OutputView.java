@@ -1,8 +1,8 @@
 package christmas.view;
 
-import static christmas.domain.discount.DiscountValue.DEFAULT_GIFT_COUNT;
-import static christmas.domain.discount.DiscountValue.NO_DISCOUNT_AMOUNT;
-import static christmas.domain.discount.DiscountValue.RECOVER_GIFT_DISCOUNT_AMOUNT;
+import static christmas.domain.discount.enums.DiscountValue.DEFAULT_GIFT_COUNT;
+import static christmas.domain.discount.enums.DiscountValue.NO_DISCOUNT_AMOUNT;
+import static christmas.domain.discount.enums.DiscountValue.RECOVER_GIFT_DISCOUNT_AMOUNT;
 import static christmas.view.message.OutputMessage.DISCOUNTED_TOTAL_AMOUNT;
 import static christmas.view.message.OutputMessage.DISCOUNTED_TOTAL_AMOUNT_TITLE;
 import static christmas.view.message.OutputMessage.DISCOUNT_DETAIL;
@@ -21,10 +21,10 @@ import static christmas.view.message.OutputMessage.TOTAL_DISCOUNT_AMOUNT;
 import static christmas.view.message.OutputMessage.TOTAL_DISCOUNT_AMOUNT_TITLE;
 
 import christmas.EventConfig;
-import christmas.domain.discount.event.EventBadge;
-import christmas.dto.DiscountDetailsDto;
-import christmas.dto.OrderMenuDto;
-import christmas.dto.VisitDateDto;
+import christmas.domain.discount.enums.EventBadge;
+import christmas.domain.discount.dto.DiscountDetailsDto;
+import christmas.domain.order.dto.OrderMenuDto;
+import christmas.domain.date.dto.VisitDateDto;
 import java.util.Map;
 
 public class OutputView {

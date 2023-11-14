@@ -1,12 +1,12 @@
 package christmas.domain.discount.policy;
 
 
-import static christmas.domain.discount.DiscountValue.CHRISTMAS_D_DAY_ADDITIONAL_DISCOUNT;
-import static christmas.domain.discount.DiscountValue.CHRISTMAS_D_DAY_DEFAULT_DISCOUNT;
-import static christmas.domain.discount.DiscountValue.DISCOUNT_START_DAY_OFFSET;
+import static christmas.domain.discount.enums.DiscountValue.CHRISTMAS_D_DAY_ADDITIONAL_DISCOUNT;
+import static christmas.domain.discount.enums.DiscountValue.CHRISTMAS_D_DAY_DEFAULT_DISCOUNT;
+import static christmas.domain.discount.enums.DiscountValue.DISCOUNT_START_DAY_OFFSET;
 
-import christmas.domain.discount.event.EventDate;
-import christmas.domain.order.Order;
+import christmas.domain.discount.enums.EventDate;
+import christmas.domain.order.domain.Order;
 
 public class ChristmasDiscount implements Discount {
 

@@ -1,6 +1,6 @@
-package christmas.service;
+package christmas.domain.order.service;
 
-import christmas.domain.order.OrderMenu;
+import christmas.domain.order.domain.OrderMenu;
 import java.util.Map;
 
 public class OrderMenuService {

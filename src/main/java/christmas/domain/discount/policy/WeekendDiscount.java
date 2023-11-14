@@ -1,9 +1,9 @@
 package christmas.domain.discount.policy;
 
-import static christmas.domain.discount.DiscountValue.WEEKEND_MAIN_COURSE_DISCOUNT;
+import static christmas.domain.discount.enums.DiscountValue.WEEKEND_MAIN_COURSE_DISCOUNT;
 
-import christmas.domain.discount.event.EventDate;
-import christmas.domain.order.Order;
+import christmas.domain.discount.enums.EventDate;
+import christmas.domain.order.domain.Order;
 
 public class WeekendDiscount implements Discount {
 

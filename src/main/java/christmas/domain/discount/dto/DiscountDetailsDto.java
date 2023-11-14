@@ -1,6 +1,6 @@
-package christmas.dto;
+package christmas.domain.discount.dto;
 
-import christmas.domain.discount.event.EventDate;
+import christmas.domain.discount.enums.EventDate;
 import java.util.Map;
 
 public record DiscountDetailsDto(Map<String, Integer> detail) {

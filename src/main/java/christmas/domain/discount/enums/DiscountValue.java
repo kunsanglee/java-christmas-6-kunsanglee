@@ -1,4 +1,4 @@
-package christmas.domain.discount;
+package christmas.domain.discount.enums;
 
 public enum DiscountValue {
     CHRISTMAS_D_DAY_DEFAULT_DISCOUNT(1_000),

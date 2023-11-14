@@ -1,8 +1,8 @@
 package christmas.controller;
 
-import christmas.dto.DiscountDetailsDto;
-import christmas.dto.OrderMenuDto;
-import christmas.dto.VisitDateDto;
+import christmas.domain.discount.dto.DiscountDetailsDto;
+import christmas.domain.order.dto.OrderMenuDto;
+import christmas.domain.date.dto.VisitDateDto;
 import christmas.service.RestaurantService;
 import christmas.view.InputView;
 import christmas.view.OutputView;

@@ -1,4 +1,4 @@
-package christmas.domain.order.menu;
+package christmas.domain.order.enums;
 
 import static christmas.exception.ExceptionMessage.INVALID_ORDER_MENU;
 

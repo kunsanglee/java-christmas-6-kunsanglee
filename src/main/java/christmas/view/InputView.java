@@ -4,8 +4,8 @@ import static christmas.view.message.InputMessage.READ_DATE_MESSAGE;
 import static christmas.view.message.InputMessage.READ_ORDER_MENU_MESSAGE;
 
 import camp.nextstep.edu.missionutils.Console;
-import christmas.dto.OrderMenuDto;
-import christmas.dto.VisitDateDto;
+import christmas.domain.order.dto.OrderMenuDto;
+import christmas.domain.date.dto.VisitDateDto;
 import christmas.view.util.InputParser;
 
 public class InputView {

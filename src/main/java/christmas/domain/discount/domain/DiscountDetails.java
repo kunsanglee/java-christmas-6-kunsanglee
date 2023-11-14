@@ -1,6 +1,6 @@
-package christmas.domain.discount;
+package christmas.domain.discount.domain;
 
-import christmas.domain.discount.event.EventDate;
+import christmas.domain.discount.enums.EventDate;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;

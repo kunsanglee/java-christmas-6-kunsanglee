@@ -1,10 +1,10 @@
-package christmas.domain.date;
+package christmas.domain.date.domain;
 
 import static christmas.EventConfig.MONTH;
 import static christmas.EventConfig.YEAR;
 import static christmas.exception.ExceptionMessage.INVALID_VISIT_DATE;
 
-import christmas.domain.discount.event.EventDate;
+import christmas.domain.discount.enums.EventDate;
 import java.time.DateTimeException;
 import java.time.DayOfWeek;
 import java.time.LocalDate;

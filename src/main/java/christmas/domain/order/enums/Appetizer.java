@@ -1,16 +1,17 @@
-package christmas.domain.order.menu;
+package christmas.domain.order.enums;
 
 import static christmas.exception.ExceptionMessage.INVALID_ORDER_MENU;
 
-public enum Dessert implements MenuItem {
-    CHOCOLATE_CAKE("초코케이크", 15_000),
-    ICE_CREAM("아이스크림", 5_000),
+public enum Appetizer implements MenuItem {
+    MUSHROOM_SOUP("양송이수프", 6_000),
+    TAPAS("타파스", 5_500),
+    CAESAR_SALAD("시저샐러드", 8_000),
     ;
 
     private final String name;
     private final int price;
 
-    Dessert(String name, int price) {
+    Appetizer(String name, int price) {
         this.name = name;
         this.price = price;
     }

@@ -1,8 +1,8 @@
-package christmas.domain.order;
+package christmas.domain.order.domain;
 
 
-import christmas.domain.date.VisitDate;
-import christmas.domain.discount.event.EventDate;
+import christmas.domain.date.domain.VisitDate;
+import christmas.domain.discount.enums.EventDate;
 
 public class Order {
 

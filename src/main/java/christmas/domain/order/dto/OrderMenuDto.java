@@ -1,4 +1,4 @@
-package christmas.dto;
+package christmas.domain.order.dto;
 
 import java.util.Map;
 

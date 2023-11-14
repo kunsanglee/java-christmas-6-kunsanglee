@@ -1,4 +1,4 @@
-package christmas.domain.discount.event;
+package christmas.domain.discount.enums;
 
 public enum EventBadge {
     NONE("없음"),

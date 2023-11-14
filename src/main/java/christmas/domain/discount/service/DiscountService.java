@@ -1,14 +1,14 @@
-package christmas.service;
+package christmas.domain.discount.service;
 
 
-import christmas.domain.discount.DiscountDetails;
+import christmas.domain.discount.domain.DiscountDetails;
 import christmas.domain.discount.policy.ChristmasDiscount;
 import christmas.domain.discount.policy.Discount;
 import christmas.domain.discount.policy.GiftDiscount;
 import christmas.domain.discount.policy.StarDayDiscount;
 import christmas.domain.discount.policy.WeekDayDiscount;
 import christmas.domain.discount.policy.WeekendDiscount;
-import christmas.domain.order.Order;
+import christmas.domain.order.domain.Order;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.stream.Collectors;

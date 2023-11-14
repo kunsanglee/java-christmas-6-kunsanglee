@@ -3,8 +3,8 @@ package christmas.domain.service;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
 
-import christmas.domain.date.VisitDate;
-import christmas.service.DateService;
+import christmas.domain.date.domain.VisitDate;
+import christmas.domain.date.service.DateService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

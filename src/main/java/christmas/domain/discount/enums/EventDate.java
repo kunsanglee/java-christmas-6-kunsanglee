@@ -1,4 +1,4 @@
-package christmas.domain.discount.event;
+package christmas.domain.discount.enums;
 
 import java.util.Arrays;
 import java.util.List;

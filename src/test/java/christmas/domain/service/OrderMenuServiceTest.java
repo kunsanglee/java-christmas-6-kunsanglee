@@ -4,8 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-import christmas.domain.order.OrderMenu;
-import christmas.service.OrderMenuService;
+import christmas.domain.order.domain.OrderMenu;
+import christmas.domain.order.service.OrderMenuService;
 import java.util.Map;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.DisplayName;

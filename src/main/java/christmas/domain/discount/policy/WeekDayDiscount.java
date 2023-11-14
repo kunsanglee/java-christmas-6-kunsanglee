@@ -1,9 +1,9 @@
 package christmas.domain.discount.policy;
 
-import static christmas.domain.discount.DiscountValue.WEEKDAY_DESSERT_DISCOUNT;
+import static christmas.domain.discount.enums.DiscountValue.WEEKDAY_DESSERT_DISCOUNT;
 
-import christmas.domain.discount.event.EventDate;
-import christmas.domain.order.Order;
+import christmas.domain.discount.enums.EventDate;
+import christmas.domain.order.domain.Order;
 
 public class WeekDayDiscount implements Discount {
 

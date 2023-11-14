@@ -1,12 +1,12 @@
-package christmas.domain.order;
+package christmas.domain.order.domain;
 
 
 import static christmas.exception.ExceptionMessage.INVALID_ORDER_MENU;
 
-import christmas.domain.order.menu.Dessert;
-import christmas.domain.order.menu.MainCourse;
-import christmas.domain.order.menu.Menu;
-import christmas.domain.order.menu.MenuItem;
+import christmas.domain.order.enums.Dessert;
+import christmas.domain.order.enums.MainCourse;
+import christmas.domain.order.enums.Menu;
+import christmas.domain.order.enums.MenuItem;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
